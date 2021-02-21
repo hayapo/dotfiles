@@ -16,3 +16,5 @@ alias ll "lsd --depth 2"
 alias ls "lsd --depth 1"
 alias lsl "ls -l"
 alias lsa "ls -la"
+
+starship init fish | source
