@@ -14,3 +14,5 @@ end
 alias lsd "lsd --tree -I "target" -I "node_modules" -I "fonts" -I "Downloads" "
 alias ll "lsd --depth 2"
 alias ls "lsd --depth 1"
+alias lsl "ls -l"
+alias lsa "ls -la"
