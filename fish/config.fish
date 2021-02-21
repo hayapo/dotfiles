@@ -8,7 +8,7 @@ eval (dircolors -c ~/.dircolors/dircolors.ansi-dark)
 
 function cd
     builtin cd $argv
-        lsd --depth 1
+        lsd --depth 1 -l
 end
 
 alias lsd "lsd --tree -I "target" -I "node_modules" -I "fonts" -I "Downloads" "
