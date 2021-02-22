@@ -20,5 +20,5 @@ alias ls "lsd --depth 1"
 alias lsl "ls -l"
 alias lsa "ls -la"
 
-toilet やあ| cowsay -n -f ghostbusters | lolcat
+neofetch
 starship init fish | source
