@@ -15,7 +15,7 @@ function cd
 end
 
 #alias exec
-alias exec "exec $SHELL -l"
+alias ex "exec $SHELL -l"
 
 #alias lsd
 alias lsd "lsd --tree -I "target" -I "node_modules" -I "fonts" -I "Downloads" "
@@ -29,8 +29,8 @@ alias gs "git status"
 alias ga "git add"
 alias gmc "gitmoji commit"
 alias gp "git push"
-alias gp main "git push -u origin main"
-alias gp master "git push -u origin master"
+alias gpmain "git push -u origin main"
+alias gpmaster "git push -u origin master"
 
 neofetch
 starship init fish | source
