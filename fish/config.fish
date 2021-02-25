@@ -14,12 +14,21 @@ function cd
         lsd --depth 1 -l
 end
 
+#alias exec
+alias exec "exec $SHELL -l"
+
 #alias lsd
 alias lsd "lsd --tree -I "target" -I "node_modules" -I "fonts" -I "Downloads" "
 alias ll "lsd --depth 2"
 alias ls "lsd --depth 1"
 alias lsl "ls -l"
 alias lsa "ls -la"
+
+#alias git 
+alias gs "git status"
+alias ga "git add"
+alias gmc "gitmoji commit"
+alias gp "git push"
 
 neofetch
 starship init fish | source
