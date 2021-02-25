@@ -2,6 +2,7 @@ alias open "explorer.exe"
 set PATH $HOME/.cargo/env $PATH
 set PATH /usr/local/bin/ecs-cli $PATH
 set PATH $HOME/.cargo/bin $PATH
+set PATH $HOME/.pyenv/bin $PATH
 if test ! -e ~/.dircolors/dircolors.ansi-dark
     git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors
 end
