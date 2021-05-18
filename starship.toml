@@ -83,9 +83,7 @@ untracked = "🤷‍"
 #stashed = "📦"
 modified = "🍔"
 staged.value = "++"
-taged.style = "green"
-staged_count.enabled = true
-staged_count.style = "green"
+staged.style = "green"
 renamed = "👅"
 deleted = "🌼"
 
