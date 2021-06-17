@@ -116,7 +116,7 @@ style = "bold blue"
 disabled = false
 format = '⌚[ $time]($format) '
 time_format = "%R"
-utc_time_offset = "+9"
+utc_time_offset = "-6"
 time_range = "00:00:00-24:00:00"
 
 [python]
