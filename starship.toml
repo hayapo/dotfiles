@@ -120,4 +120,5 @@ utc_time_offset = "9"
 time_range = "00:00:00-24:00:00"
 
 [python]
-pyenv_prefix = "pyenv "
+pyenv_prefix = 'pyenv '
+pyenv_version_name = true

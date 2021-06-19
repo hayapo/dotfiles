@@ -36,3 +36,4 @@ alias gpmaster "git push -u origin master"
 
 neofetch
 starship init fish | source
+pyenv init - | source
