@@ -33,7 +33,7 @@ alias gmc "gitmoji commit -c"
 alias gp "git push"
 alias gpmain "git push -u origin main"
 alias gpmaster "git push -u origin master"
-
+alias activate "source .venv/bin/activate.fish"
 neofetch
 starship init fish | source
 pyenv init - | source
