@@ -38,4 +38,3 @@ alias gpmaster "git push -u origin master"
 alias activate "source .venv/bin/activate.fish"
 neofetch
 starship init fish | source
-pyenv init - | source

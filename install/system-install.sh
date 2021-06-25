@@ -2,9 +2,9 @@
 
 tput setaf 2 && echo "Updating apt"
 sudo apt update && sudo apt -yV upgrade
-ln -sf "~/dotfiles/.bashrc" "~/.bashrc" 
-ln -sf "~/dotfiles/.hushlogin" "~/.hushlogin" 
-ln -sf "~/dotfiles/.profile" "~/.profile" 
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.hushlogin ~/.hushlogin
+ln -sf ~/dotfiles/.profile ~/.profile
 tput setaf 2 && echo "Installing System"
 sudo apt-get install -y curl
 sudo apt-get install -y wget
@@ -18,7 +18,7 @@ select yn in "Yes" "No"; do
     case $yn in 
         Yes )
             sudo apt install -y neofetch
-            ln -sf "~/dotfiles/neofetch" "~/.config/neofetch"
+            ln -sf ~/dotfiles/neofetch ~/.config/
             break;;
         No ) break;;
     esac
