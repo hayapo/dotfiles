@@ -6,10 +6,10 @@ set PATH $HOME/.cargo/bin $PATH
 set PATH $HOME/.pyenv/bin $PATH
 set -U FZF_LEGACY_KEYBINDINGS 0
 
-if test ! -e ~/.dircolors/dircolors.ansi-dark
+if test ! -e ~/.dircolors/dircolors.ansi-light
     git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors
 end
-eval (dircolors -c ~/.dircolors/dircolors.ansi-dark)
+eval (dircolors -c ~/.dircolors/dircolors.ansi-light)
 
 # cd > ls
 function cd
