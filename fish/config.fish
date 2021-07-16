@@ -22,8 +22,8 @@ alias ex "exec $SHELL -l"
 
 #alias lsd
 alias lsd "lsd --tree -I "target" -I "node_modules" -I "fonts" -I "Downloads" "
-alias ll "lsd --depth 2"
-alias ls "lsd --depth 1"
+alias ll "lsd --tree --depth 2"
+alias ls "lsd --tree --depth 1"
 alias lsl "ls -l"
 alias lsa "ls -la"
 
