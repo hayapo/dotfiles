@@ -37,7 +37,7 @@ select yn in "Yes" "No"; do
             rustup install nightly
 
             cargo install starship
-            ln -sf "~/dotfiles/starship.toml" "~/.config/starship.toml"
+            ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
             cargo install exa
             cargo install lsd
             break;;
