@@ -32,12 +32,12 @@ tput setaf 2; echo "Do you want to install Starship ?"; tput sgr0
 select VAR in "Yes" "No"; do
     case $VAR in 
         "Yes" )
-            echo brew "starship" >> '../Brewfile'
-            brew bundle --file '../Brewfile'
+            brew bundle --file '~/dotfiles/Brewfile'
+            brew install starship
             break;;
 
         "NO" )
-            brew bundle --file '../Brewfile'
+            brew bundle --file '~/dotfiles/Brewfile'
             break;;
     esac
 done
