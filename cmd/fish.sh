@@ -6,5 +6,3 @@ if has "fisher" ; then
 
 # plugin install
 copy -f ~/dotfiles/.config/fish/fish_plugins ~/dotfiles/.config/fish/fishfile
-fisher
-fisher ls

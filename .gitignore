@@ -4,3 +4,4 @@ gitmoji-nodejs/
 .config/gatsby/
 .config/pypoetry/
 .config/fish/fish_variables
+Brewfile.lock.json
