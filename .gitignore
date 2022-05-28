@@ -3,4 +3,4 @@ gitmoji-nodejs/
 .config/configstore/
 .config/gatsby/
 .config/pypoetry/
-.config/fish_variables
+.config/fish/fish_variables
