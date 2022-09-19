@@ -38,3 +38,5 @@ alias gcb "git checkout -b"
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
 starship init fish | source
+eval (direnv hook fish)
+eval (direnv hook fish)
