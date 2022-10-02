@@ -1,7 +1,1 @@
-wslu/
-gitmoji-nodejs/
-.config/configstore/
-.config/gatsby/
-.config/pypoetry/
-.config/fish/fish_variables
 Brewfile.lock.json
