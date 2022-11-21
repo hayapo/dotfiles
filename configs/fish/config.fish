@@ -6,6 +6,7 @@ set PATH $HOME/.poetry/bin $PATH
 set PATH /usr/local/go/bin $PATH
 set PATH $HOME/go/bin $PATH
 set -U fish_greeting
+set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 if test ! -e ~/.dircolors/dircolors.ansi-light
     git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors
@@ -36,6 +37,10 @@ alias gba "git branch -a"
 alias gc "git checkout"
 alias gcb "git checkout -b"
 alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
+
+#alias nvim
+alias vi "nvim"
+alias vim "nvim"
 
 starship init fish | source
 eval (direnv hook fish)
