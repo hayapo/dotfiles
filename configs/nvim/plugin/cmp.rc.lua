@@ -2,7 +2,6 @@
 local lspkind = require("lspkind")
 --補完関係の設定
 local cmp = require("cmp")
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -21,11 +20,11 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(4),
-    ['<C-p>'] = cmp.mapping.select_prev_item(),
-    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+    ['<Tab>'] = cmp.mapping.select_next_item(),
     ['<C-l>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
   }),
   experimental = {
     ghost_text = false,

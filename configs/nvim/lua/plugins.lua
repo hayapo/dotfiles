@@ -8,8 +8,11 @@ require('jetpack.packer').startup(function(use)
 	use 'lambdalisue/nerdfont.vim'
 	
 	-- lualine
-	use 'nvim-lualine/lualine.nvim'
+	-- use 'nvim-lualine/lualine.nvim'
 	use 'kyazdani42/nvim-web-devicons'
+	
+	-- feline
+	use 'feline-nvim/feline.nvim'
 	
 	-- fern
 	use 'lambdalisue/fern.vim'
@@ -17,6 +20,9 @@ require('jetpack.packer').startup(function(use)
 	use 'lambdalisue/glyph-palette.vim'
 	use	'yuki-yano/fern-preview.vim'
 	use 'lambdalisue/fern-git-status.vim'
+	
+	use 'zefei/vim-wintabs'
+  use 'zefei/vim-wintabs-powerline'
 	
 	-- mason
 	use 'williamboman/mason.nvim'
@@ -30,6 +36,7 @@ require('jetpack.packer').startup(function(use)
   use 'hrsh7th/cmp-path'
 	use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/cmp-vsnip'
+	use 'hrsh7th/cmp-nvim-lsp-signature-help'
 	use 'onsails/lspkind.nvim'
 	
 	-- lspsaga
@@ -40,10 +47,21 @@ require('jetpack.packer').startup(function(use)
 
   -- treesitter
 	use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  }
+		'nvim-treesitter/nvim-treesitter',
+		run = function()
+			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+			ts_update()
+		end,
+	}
 	use 'j-hui/fidget.nvim'
 
+	use {
+		'akinsho/bufferline.nvim',
+		tag = "v3.*",
+		requires = 'nvim-tree/nvim-web-devicons'
+	}
+
+	-- sidebar
+	use 'sidebar-nvim/sidebar.nvim'
 end)
 

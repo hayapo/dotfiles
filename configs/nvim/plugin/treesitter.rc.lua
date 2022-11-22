@@ -9,7 +9,7 @@ treesitter.setup {
     disable = {},
   },
 	indent ={
-		enable =true
+		enable = true
 	},
   autotag = {
     enable = false,

@@ -6,7 +6,7 @@ local keymap = vim.keymap.set
 saga.init_lsp_saga{
 -- Options with default value
 -- "single" | "double" | "rounded" | "bold" | "plus"
-border_style = "single",
+border_style = "bold",
 --the range of 0 for fully opaque window (disabled) to 100 for fully
 --transparent background. Values between 0-30 are typically most useful.
 saga_winblend = 5,
@@ -14,9 +14,9 @@ saga_winblend = 5,
 -- move_in_saga = { prev = '<C-p>',next = '<C-n>'},
 diagnostic_header = { " ", " ", " ", "ﴞ " },
 -- preview lines of lsp_finder and definition preview
-max_preview_lines = 10,
+max_preview_lines = 20,
 -- use emoji lightbulb in default
-code_action_icon = "◆",
+--code_action_icon = "◆",
 -- if true can press number to execute the codeaction in codeaction window
 code_action_num_shortcut = true,
 -- same as nvim-lightbulb but async
@@ -65,7 +65,7 @@ rename_in_select = true,
 -- if in_cusomt = true you must set in_enable to false
 symbol_in_winbar = {
     in_custom = false,
-    enable = false,
+    enable = true,
     separator = ' ',
     show_file = true,
     -- define how to customize filename, eg: %:., %
@@ -78,6 +78,7 @@ symbol_in_winbar = {
 -- show outline
 show_outline = {
   win_position = 'right',
+  enable = true,
   --set special filetype win that outline window split.like NvimTree neotree
   -- defx, db_ui
   win_with = '',
@@ -97,18 +98,13 @@ custom_kind = {},
 -- like server_filetype_map = { metals = { "sbt", "scala" } }
 server_filetype_map = {},
 }
-keymap("n", "<space>e", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
 keymap("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
-keymap({"n","v"}, "ma", "<cmd>Lspsaga code_action<CR>", { silent = true })
-keymap("n", "rn", "<cmd>Lspsaga rename<CR>", { silent = true })
-keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
--- Diagnsotic jump can use `<c-o>` to jump back
-keymap("n", "g[", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
-keymap("n", "g]", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
-
 keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
--- vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
--- vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
--- vim.keymap.set('i', '<C-m>', '<Cmd>Lspsaga signature_help<CR>', opts)
--- vim.keymap.set('n', 'gd', '<Cmd>Lspsaga preview_definition<CR>', opts)
--- vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+keymap("n", "gj", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+keymap("n", "gl", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+keymap("n", "D", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+keymap("n", "<M-t>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })
+keymap("t", "<M-t>", [[<C-\><C-n><cmd>Lspsaga close_floaterm<CR>]], { silent = true })
+keymap("n", "<space>e", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+keymap({"n","v"}, "ma", "<cmd>Lspsaga code_action<CR>", { silent = true })
