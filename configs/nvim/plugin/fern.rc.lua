@@ -6,7 +6,9 @@ let mapleader = "\<Space>"
 " 隠しファイルを表示する
 let g:fern#default_hidden=1
 " Fern .をSpace+eキーに置き換え
-noremap <silent> <Leader>f :<C-u>Fern .<CR>
+noremap <silent> <Leader>t :<C-u>Fern .<CR>
+noremap <silent> <Leader>f : Fern . -toggle -drawer<CR>
+
 augroup my-glyph-palette
   autocmd! *
   autocmd FileType fern call glyph_palette#apply()
