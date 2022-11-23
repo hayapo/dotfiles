@@ -29,7 +29,9 @@ require('jetpack.packer').startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
 	
-	-- cmp
+	-- completion
+  --	use 'Shougo/ddc-nvim-lsp'
+	-- use 'vim-denops/denops.vim'
 	use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -38,6 +40,8 @@ require('jetpack.packer').startup(function(use)
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/cmp-nvim-lsp-signature-help'
 	use 'onsails/lspkind.nvim'
+	use 'saadparwaiz1/cmp_luasnip'
+	use 'L3MON4D3/LuaSnip'
 	
 	-- lspsaga
 	use({

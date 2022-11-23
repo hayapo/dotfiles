@@ -121,3 +121,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 export PATH=$PATH:'/mnt/c/Users/hayat/AppData/Local/Programs/Microsoft VS Code/bin'
+
+export PYENV_ROOT="${HOME}/.pyenv"
+export PATH=${PYENV_ROOT}/shims:$PATH

@@ -1,5 +1,5 @@
 local on_attach = function(client, bufnr)
-
+	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- LSPが持つフォーマット機能を無効化する
   -- →例えばtsserverはデフォルトでフォーマット機能を提供しますが、利用したくない場合はコメントアウトを解除してください
   --client.server_capabilities.documentFormattingProvider = false
@@ -21,9 +21,16 @@ local on_attach = function(client, bufnr)
 
 end
 
--- 補完プラグインであるcmp_nvim_lspをLSPと連携させています（後述）
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- local virtual_env_path = vim.trim(vim.fn.system('poetry config virtualenvs.path'))
+-- local virtual_env_dirctory = vim.trim(vim.fn.system('poetry env list'))
+-- local python_path = 'python'
 
+-- if #vim.split(virtual_env_dirctory, '\n') == 1 then
+--   python_path = string.format("%s/%s/bin/python", virtual_env_path, virtual_env_dirctory)
+-- end
+
+-- 補完プラグインであるcmp_nvim_lspをLSPと連携させています（後述）
+-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- この一連の記述で、mason.nvimでインストールしたLanguage Serverが自動的に個別にセットアップされ、利用可能になります
 require("mason").setup()
 require("mason-lspconfig").setup()
@@ -31,7 +38,38 @@ require("mason-lspconfig").setup_handlers {
   function (server_name) -- default handler (optional)
     require("lspconfig")[server_name].setup {
       on_attach = on_attach, --keyバインドなどの設定を登録
-      capabilities = capabilities, --cmpを連携
+      --capabilities = capabilities, --cmpを連携
     }
-  end,
+		require("lspconfig").pyright.setup{
+			settings = {
+				python = {
+					-- venvPath = ".",
+					-- venv = "./.venv",
+					pythonPath = "./.venv/bin/python",
+					analysis = {
+						extraPaths = {"."}
+					}
+				}
+			}
+		}
+		require("lspconfig").jedi_language_server.setup{
+			init_options = {
+				hover = {
+					enable = true,
+				},
+				diagnostic = {
+					enable = true,
+				},
+				completion = {
+					disableSnippets = true,
+				},
+				jediSettings = {
+      		autoImportModules = {'numpy', 'pandas'},
+    		},
+				workspace = {
+					environmentPath = "./.venv/bin/python",
+				},
+			}
+		}
+	end,
 }

@@ -2,6 +2,7 @@
 local lspkind = require("lspkind")
 --補完関係の設定
 local cmp = require("cmp")
+
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -13,7 +14,9 @@ cmp.setup({
       },
   sources = {
     { name = "nvim_lsp" },
+		{ name = "treesitter" },
 		{ name = 'vsnip' },
+		{ name = 'luasnip' },
     { name = "buffer" },
     { name = "path" },
     { name = 'nvim_lsp_signature_help' },
@@ -22,9 +25,9 @@ cmp.setup({
     ['<C-b>'] = cmp.mapping.scroll_docs(4),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     ['<Tab>'] = cmp.mapping.select_next_item(),
-    ['<C-l>'] = cmp.mapping.complete(),
+    ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['jj'] = cmp.mapping.confirm({ select = true }),
   }),
   experimental = {
     ghost_text = false,

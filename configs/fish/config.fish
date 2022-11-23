@@ -2,6 +2,7 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 set PATH $HOME/.cargo/bin $PATH
 set PATH $HOME/.cargo/env $PATH
 set PATH $HOME/.pyenv/bin $PATH
+set PATH $HOME/.pyenv/shims $PATH
 set PATH $HOME/.poetry/bin $PATH
 set PATH /usr/local/go/bin $PATH
 set PATH $HOME/go/bin $PATH
@@ -36,7 +37,7 @@ alias gpmaster "git push -u origin master"
 alias gba "git branch -a"
 alias gc "git checkout"
 alias gcb "git checkout -b"
-alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
+#alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
 #alias nvim
 alias vi "nvim"
