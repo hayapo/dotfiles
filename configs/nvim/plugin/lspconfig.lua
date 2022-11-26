@@ -18,7 +18,6 @@ local on_attach = function(client, bufnr)
   --set("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>")
   --set("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>")
   --set("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>")
-
 end
 
 -- local virtual_env_path = vim.trim(vim.fn.system('poetry config virtualenvs.path'))
@@ -30,15 +29,16 @@ end
 -- end
 
 -- 補完プラグインであるcmp_nvim_lspをLSPと連携させています（後述）
--- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- この一連の記述で、mason.nvimでインストールしたLanguage Serverが自動的に個別にセットアップされ、利用可能になります
+local nvim_lsp = require('lspconfig')
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("mason-lspconfig").setup_handlers {
   function (server_name) -- default handler (optional)
     require("lspconfig")[server_name].setup {
       on_attach = on_attach, --keyバインドなどの設定を登録
-      --capabilities = capabilities, --cmpを連携
+      capabilities = capabilities, --cmpを連携
     }
 		require("lspconfig").pyright.setup{
 			settings = {
@@ -71,5 +71,24 @@ require("mason-lspconfig").setup_handlers {
 				},
 			}
 		}
+    require("lspconfig").denols.setup({
+      root_dir = nvim_lsp.util.root_pattern("deno.json"),
+      init_options = {
+        lint = true,
+        unstable = true,
+        suggest = {
+          imports = {
+            hosts = {
+              ["https://deno.land"] = true,
+              ["https://cdn.nest.land"] = true,
+              ["https://crux.land"] = true,
+            },
+          },
+        },
+      },
+    })
+    require("lspconfig").tsserver.setup({
+      root_dir = nvim_lsp.util.root_pattern("package.json"),
+    })
 	end,
 }
