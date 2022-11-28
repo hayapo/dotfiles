@@ -89,6 +89,8 @@ require("mason-lspconfig").setup_handlers {
     })
     require("lspconfig").tsserver.setup({
       root_dir = nvim_lsp.util.root_pattern("package.json"),
+      filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+      cmd = { "typescript-language-server", "--stdio" },
     })
 	end,
 }
