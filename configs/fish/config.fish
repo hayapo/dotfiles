@@ -43,5 +43,8 @@ alias gcb "git checkout -b"
 alias vi "nvim"
 alias vim "nvim"
 
+#alias fzf preview
+alias fp "fzf --preview 'bat  --color=always --style=header,grid --line-range :100 {}'"
+
 starship init fish | source
 eval (direnv hook fish)

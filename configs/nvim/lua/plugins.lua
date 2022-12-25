@@ -22,20 +22,20 @@ require('jetpack.packer').startup(function(use)
 	use 'lambdalisue/fern-git-status.vim'
 	
 	use 'zefei/vim-wintabs'
-  use 'zefei/vim-wintabs-powerline'
+	use 'zefei/vim-wintabs-powerline'
 	
 	-- mason
 	use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
-  use 'neovim/nvim-lspconfig'
+	use 'williamboman/mason-lspconfig.nvim'
+	use 'neovim/nvim-lspconfig'
 	
 	-- completion
-  --	use 'Shougo/ddc-nvim-lsp'
+  	-- use 'Shougo/ddc-nvim-lsp'
 	-- use 'vim-denops/denops.vim'
 	use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
+  	use 'hrsh7th/cmp-nvim-lsp'
+  	use 'hrsh7th/cmp-buffer'
+  	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/vim-vsnip'
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/cmp-nvim-lsp-signature-help'
@@ -67,5 +67,8 @@ require('jetpack.packer').startup(function(use)
 
 	-- sidebar
 	use 'sidebar-nvim/sidebar.nvim'
+
+	-- indent blankline
+	use "lukas-reineke/indent-blankline.nvim"
 end)
 
