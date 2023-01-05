@@ -3,7 +3,6 @@
 BIN_NAME="$(basename "$0")"
 COMMAND_NAME=$1
 
-
 sub_help () {
     echo "Usage: $BIN_NAME <command>\n"
     echo "Commands:"
@@ -38,8 +37,8 @@ sub_node() {
 
 case $COMMAND_NAME in
     "" | "-h" | "--help")
-        sub_help
-        ;;
+		sub_help
+		;;
     *)
         shift
         "sub_${COMMAND_NAME}" "$@"
