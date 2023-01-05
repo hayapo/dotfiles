@@ -37,6 +37,7 @@ alias gpmaster "git push -u origin master"
 alias gba "git branch -a"
 alias gc "git checkout"
 alias gcb "git checkout -b"
+alias gcm "git commit -m"
 #alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
 #alias nvim

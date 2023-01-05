@@ -70,5 +70,8 @@ require('jetpack.packer').startup(function(use)
 
 	-- indent blankline
 	use "lukas-reineke/indent-blankline.nvim"
+
+	-- zig.vim
+	use "ziglang/zig.vim"
 end)
 
