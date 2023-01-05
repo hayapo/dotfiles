@@ -3,7 +3,7 @@ let g:fern#renderer = "nerdfont"
 let g:fern#default_hidden=1
 
 noremap <silent> <M-c> :<C-u>Fern .<CR>
-noremap <silent> <M-f> :<C-u>Fern . -toggle -drawer<CR>
+noremap <silent> <M-e> :<C-u>Fern . -toggle -drawer<CR>
 augroup my-glyph-palette
   autocmd! *
   autocmd FileType fern call glyph_palette#apply()
