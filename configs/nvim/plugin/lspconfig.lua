@@ -40,57 +40,61 @@ require("mason-lspconfig").setup_handlers {
       on_attach = on_attach, --keyバインドなどの設定を登録
       capabilities = capabilities, --cmpを連携
     }
-		require("lspconfig").pyright.setup{
-			settings = {
-				python = {
-					-- venvPath = ".",
-					-- venv = "./.venv",
-					pythonPath = "./.venv/bin/python",
-					analysis = {
-						extraPaths = {"."}
-					}
+
+	require("lspconfig").pyright.setup{
+		settings = {
+			python = {
+				-- venvPath = ".",
+				-- venv = "./.venv",
+				pythonPath = "./.venv/bin/python",
+				analysis = {
+					extraPaths = {"."}
 				}
 			}
 		}
-		require("lspconfig").jedi_language_server.setup{
-			init_options = {
-				hover = {
-					enable = true,
-				},
-				diagnostic = {
-					enable = true,
-				},
-				completion = {
-					disableSnippets = true,
-				},
-				jediSettings = {
-      		autoImportModules = {'numpy', 'pandas'},
-    		},
-				workspace = {
-					environmentPath = "./.venv/bin/python",
-				},
-			}
+	}
+	require("lspconfig").jedi_language_server.setup{
+		init_options = {
+			hover = {
+				enable = true,
+			},
+			diagnostic = {
+				enable = true,
+			},
+			completion = {
+				disableSnippets = true,
+			},
+			jediSettings = {
+				autoImportModules = {'numpy', 'pandas'},
+			},
+			workspace = {
+				environmentPath = "./.venv/bin/python",
+			},
 		}
-    require("lspconfig").denols.setup({
-      root_dir = nvim_lsp.util.root_pattern("deno.json"),
-      init_options = {
-        lint = true,
-        unstable = true,
-        suggest = {
-          imports = {
-            hosts = {
-              ["https://deno.land"] = true,
-              ["https://cdn.nest.land"] = true,
-              ["https://crux.land"] = true,
-            },
-          },
-        },
-      },
+	}
+	require("lspconfig").denols.setup({
+		root_dir = nvim_lsp.util.root_pattern("deno.json"),
+		init_options = {
+			lint = true,
+			unstable = true,
+			suggest = {
+				imports = {
+					hosts = {
+						["https://deno.land"] = true,
+						["https://cdn.nest.land"] = true,
+						["https://crux.land"] = true,
+					},
+				},
+			},
+		},
     })
     require("lspconfig").tsserver.setup({
-      root_dir = nvim_lsp.util.root_pattern("package.json"),
-      filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-      cmd = { "typescript-language-server", "--stdio" },
+    	root_dir = nvim_lsp.util.root_pattern("package.json"),
+    	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    	cmd = { "typescript-language-server", "--stdio" },
     })
+	require("lspconfig").zls.setup({
+		servers = {'zls'}
+	})
 	end,
 }
