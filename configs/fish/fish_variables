@@ -12,6 +12,9 @@ SETUVAR Z_DATA:/home/hayapo/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/hayapo/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/hayapo\x24
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_decors_2F_fish_2D_ghq_files:\x7e/\x2econfig/fish/functions/__ghq_repository_search\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/ghq_key_bindings\x2efish\x1e\x7e/\x2econfig/fish/completions/ghq\x2efish
+SETUVAR _fisher_plugins:decors/fish\x2dghq
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:\x1d
 SETUVAR _tide_prompt_10333:\x1d
 SETUVAR _tide_right_items:\x1d
