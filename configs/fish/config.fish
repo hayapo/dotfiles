@@ -38,6 +38,14 @@ alias gba "git branch -a"
 alias gc "git checkout"
 alias gcb "git checkout -b"
 alias gcm "git commit -m"
+alias cm "commit -m"
+alias st "status"
+alias a "add"
+alias co "checkout"
+alias br "branch"
+alias bra "branch -a"
+alias cob "checkout -b"
+
 #alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
 #alias nvim
