@@ -124,3 +124,11 @@ export PATH=$PATH:'/mnt/c/Users/hayat/AppData/Local/Programs/Microsoft VS Code/b
 
 export PYENV_ROOT="${HOME}/.pyenv"
 export PATH=${PYENV_ROOT}/shims:$PATH
+
+# pnpm
+export PNPM_HOME="/home/hayapo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

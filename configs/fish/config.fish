@@ -53,7 +53,7 @@ alias vi "nvim"
 alias vim "nvim"
 
 #alias fzf preview
-alias fp "fzf --preview 'bat  --color=always --style=header,grid --line-range :100 {}'"
+alias fp "fzf --preview 'bat  --color=always --style=header, grid --line-range :100 {}'"
 
 function ghq_fzf_repo -d 'Repository search'
   ghq list --full-path | fzf --reverse --height=100% | read select

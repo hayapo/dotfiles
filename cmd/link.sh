@@ -5,3 +5,4 @@ ln -sf ~/dotfiles/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/.hushlogin ~/.hushlogin
 ln -sf ~/dotfiles/.profile ~/.profile
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/configs/neovim/ ~/.config/nvim

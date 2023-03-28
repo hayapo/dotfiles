@@ -41,3 +41,7 @@ select VAR in "Yes" "No"; do
             break;;
     esac
 done
+
+# install Linuxbrew
+tput setaf 2; echo "Install Packer.nvim"; tput sgr0
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
