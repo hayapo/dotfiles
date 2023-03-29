@@ -134,9 +134,9 @@ esac
 # pnpm end
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="
-  --preview 'bat --color=always --style=header,grid {}'
-  --preview-window=right:60%
-"
 export FZF_DEFAULT_OPTS="--height 80% --layout=reverse"
+# export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_ALT_C_OPTS="
+#   --preview 'bat --color=always --style=header,grid {}'
+#   --preview-window=right:60%
+# "

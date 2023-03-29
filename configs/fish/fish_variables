@@ -1,11 +1,15 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
-SETUVAR FZF_DISABLE_KEYBINDINGS:0
+SETUVAR FZF_ALT_C_COMMAND:rg\x20\x2d\x2dfiles\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dglob\x20\x22\x21\x2egit/\x2a\x22
+SETUVAR FZF_ALT_C_OPTS:\x0a\x20\x20\x2d\x2dpreview\x20\x27bat\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dstyle\x3dheader\x2cgrid\x20\x7b\x7d\x27\x0a\x20\x20\x2d\x2dpreview\x2dwindow\x3dright\x3a60\x25\x0a
+SETUVAR FZF_CTRL_O_COMMAND:rg\x20\x2d\x2dfiles\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dglob\x20\x22\x21\x2egit/\x2a\x22
+SETUVAR FZF_CTRL_O_OPTS:\x0a\x20\x20\x2d\x2dpreview\x20\x27bat\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dstyle\x3dheader\x2cgrid\x20\x7b\x7d\x27\x0a\x20\x20\x2d\x2dpreview\x2dwindow\x3dright\x3a60\x25\x0a
+SETUVAR FZF_DEFAULT_COMMAND:rg\x20\x2d\x2dfiles\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dglob\x20\x22\x21\x2egit/\x2a\x22
+SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2080\x25\x20\x2d\x2dlayout\x3dreverse
+SETUVAR FZF_DIRECTORY_COMMAND:rg\x20\x2d\x2dfiles\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dglob\x20\x22\x21\x2egit/\x2a\x22
+SETUVAR FZF_DIRECTORY_OPTS:\x0a\x20\x20\x2d\x2dpreview\x20\x27bat\x20\x2d\x2dcolor\x3dalways\x20\x2d\x2dstyle\x3dheader\x2cgrid\x20\x7b\x7d\x27\x0a\x20\x20\x2d\x2dpreview\x2dwindow\x3dright\x3a60\x25\x0a
+SETUVAR FZF_FIND_FILE_COMMAND:rg\x20\x2d\x2dfiles\x20\x2d\x2dhidden\x20\x2d\x2dfollow\x20\x2d\x2dglob\x20\x22\x21\x2egit/\x2a\x22
 SETUVAR FZF_LEGACY_KEYBINDINGS:0
-SETUVAR FZF_PREVIEW_DIR_CMD:ls
-SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
-SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/hayapo/\x2elocal/share/z/data
@@ -13,7 +17,8 @@ SETUVAR Z_DATA_DIR:/home/hayapo/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/hayapo\x24
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_decors_2F_fish_2D_ghq_files:\x7e/\x2econfig/fish/functions/__ghq_repository_search\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/ghq_key_bindings\x2efish\x1e\x7e/\x2econfig/fish/completions/ghq\x2efish
-SETUVAR _fisher_plugins:decors/fish\x2dghq
+SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_changed_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_diff_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e\x7e/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
+SETUVAR _fisher_plugins:decors/fish\x2dghq\x1epatrickf1/fzf\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:\x1d
 SETUVAR _tide_prompt_10333:\x1d

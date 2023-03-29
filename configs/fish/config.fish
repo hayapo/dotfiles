@@ -70,3 +70,12 @@ end
 
 starship init fish | source
 eval (direnv hook fish)
+
+set -U FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
+# set -U FZF_FIND_FILE_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
+set -U FZF_DEFAULT_OPTS "--height 80% --layout=reverse"
+#set -U FZF_DIRECTORY_COMMAND "$FZF_DEFAULT_COMMAND"
+# set -U FZF_DIRECTORY_OPTS "
+#   --preview 'bat --color=always --style=header,grid {}'
+#   --preview-window=right:60%
+# "
