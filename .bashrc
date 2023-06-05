@@ -140,3 +140,5 @@ export FZF_DEFAULT_OPTS="--height 80% --layout=reverse"
 #   --preview 'bat --color=always --style=header,grid {}'
 #   --preview-window=right:60%
 # "
+. "$HOME/.cargo/env"
+source "$HOME/.rye/env"

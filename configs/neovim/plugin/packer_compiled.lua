@@ -184,10 +184,10 @@ _G.packer_plugins = {
     path = "/home/hayapo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rust.vim"] = {
+  ["rust-tools.nvim"] = {
     loaded = true,
-    path = "/home/hayapo/.local/share/nvim/site/pack/packer/start/rust.vim",
-    url = "https://github.com/rust-lang/rust.vim"
+    path = "/home/hayapo/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["sqlite.lua"] = {
     loaded = true,

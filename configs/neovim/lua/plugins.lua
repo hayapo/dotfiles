@@ -68,5 +68,6 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   -- Rust Integration
-  use 'rust-lang/rust.vim'
+  -- use 'rust-lang/rust.vim'
+  use 'simrat39/rust-tools.nvim'
 end)

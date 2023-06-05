@@ -6,6 +6,7 @@ set PATH $HOME/.pyenv/shims $PATH
 set PATH $HOME/.poetry/bin $PATH
 set PATH /usr/local/go/bin $PATH
 set PATH $HOME/go/bin $PATH
+set PATH $HOME/.rye/env $PATH
 set -U fish_greeting
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
