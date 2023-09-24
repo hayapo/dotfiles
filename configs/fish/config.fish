@@ -49,10 +49,6 @@ alias cob "checkout -b"
 
 #alias brew="env PATH=(string replace (pyenv root)/shims '' \"\$PATH\") brew"
 
-#alias nvim
-alias vi "nvim"
-alias vim "nvim"
-
 #alias fzf preview
 #alias fzf "fd --type f --strip-cwd-prefix"
 alias fp "fzf --preview 'bat  --color=always --style=header,grid --line-range :100 {}'"
@@ -70,7 +66,6 @@ function fish_user_key_bindings
 end
 
 starship init fish | source
-eval (direnv hook fish)
 
 set -U FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
 # set -U FZF_FIND_FILE_COMMAND 'rg --files --hidden --follow --glob "!.git/*"'
