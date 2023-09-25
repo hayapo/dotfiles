@@ -8,6 +8,14 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.cargo/env:$PATH
 export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
+export PATH=$HOME/.rye/env:$PATH
+export PATH="$HOME/.rye/shims:$PATH"
+
+# bind keys
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey ';5C' forward-word
+bindkey ';5D' backward-word
 
 # alias
 ## lsd
@@ -35,11 +43,10 @@ bindkey -s '^p' 'fp\n'
 
 ## ghq配下のディレクトリを一覧表示
 function _ghq_fzf_repo() {
-  local fzf_opts="--reverse --height=100% --border"
-  local root="$(ghq root)"
-  local repo="$(ghq list | fzf $(fzf_opts) --preview="ls -AF --color=always ${root}/{1}")"
-  local dir="${root}/${repo}"
-  [ -n "${dir}" ] && cd "${dir}"
+  local repo="$(ghq list | fzf --height=100% --border --preview="ls -AF --color=always ${root}/{1}")"
+  if [ -n "$repo" ]; then
+    BUFFER="cd $(ghq root)/$repo"
+  fi
   zle accept-line
   zle reset-prompt
 }
