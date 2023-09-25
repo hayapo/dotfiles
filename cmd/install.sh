@@ -18,13 +18,15 @@ done
 tput setaf 2; echo "Install Rust"; tput sgr0
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+# install Go
+wget "https://go.dev/dl/$(curl 'https://go.dev/VERSION?m=text').linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go*.linux-amd64.tar.gz
+
 # install Linuxbrew
 tput setaf 2; echo "Install Linuxbrew"; tput sgr0
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bash_profile
-echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.profile
 
 # install brew bundle
 # TODO:UbuntuのときはStarshipをインストールするようにする
@@ -41,7 +43,3 @@ select VAR in "Yes" "No"; do
             break;;
     esac
 done
-
-# install Linuxbrew
-tput setaf 2; echo "Install Packer.nvim"; tput sgr0
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
