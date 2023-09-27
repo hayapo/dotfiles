@@ -101,12 +101,12 @@ us-west-2 = "or"
 
 [battery]
 disabled = false
-format = "[$symbol$percentage]($style) "
-full_symbol = "🔋 "
-charging_symbol = " "
-discharging_symbol = " "
-empty_symbol = " "
-unknown_symbol = " "
+format = "[$symbol $percentage]($style) "
+full_symbol = "󰁹"
+charging_symbol = "󰂄"
+discharging_symbol = "󰁾"
+empty_symbol = "󰂃"
+unknown_symbol = "󰂑"
 [[battery.display]]
 threshold = 100
 style = "bold blue"
