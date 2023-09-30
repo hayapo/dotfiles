@@ -25,6 +25,7 @@ alias ll="ls -l"
 alias lsa="ls -la"
 
 ## Git
+### git 
 alias gc-b="git checkout -b"
 alias gp="git push"
 alias gpl="git pull"
@@ -32,6 +33,9 @@ alias ga="git add"
 alias gs="git status"
 alias gc-m="git commit -m"
 alias ghg="ghq get"
+
+### lazy git
+alias lg="lazygit"
 
 ## alias exec
 alias ex "exec zsh"
