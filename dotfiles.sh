@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 BIN_NAME="$(basename "$0")"
 COMMAND_NAME=$1
@@ -7,13 +7,13 @@ sub_help () {
     echo "Usage: $BIN_NAME <command>\n"
     echo "Commands:"
     echo "   help               This help message"
-    echo "   symblink           Creating Symblic Links"
+    echo "   link           Creating Symblic Links"
     echo "   install            Install basic setup for Ubuntu"
     echo "   fish               Install fish plugin"
-    echo "   node               Install node.js"
+    echo "   node               Install node.js with nvm"
 }
 
-sub_symblink () {
+sub_link () {
     sudo chmod +x cmd/link.sh
     bash cmd/link.sh
 }

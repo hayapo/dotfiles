@@ -1,32 +1,30 @@
-# How to SetUp
+```
+.__                                             .___      __    _____.__.__                 
+|  |__ _____  ___.__._____  ______   ____     __| _/_____/  |__/ ____\__|  |   ____   ______
+|  |  \\__  \<   |  |\__  \ \____ \ /  _ \   / __ |/  _ \   __\   __\|  |  | _/ __ \ /  ___/
+|   Y  \/ __ \\___  | / __ \|  |_> >  <_> ) / /_/ (  <_> )  |  |  |  |  |  |_\  ___/ \___ \ 
+|___|  (____  / ____|(____  /   __/ \____/  \____ |\____/|__|  |__|  |__|____/\___  >____  >
+     \/     \/\/          \/|__|                 \/                               \/     \/ 
+```
 
-## Before clone this repo
+# hayapo dotfiles
 
-1. Install git
-2. SSH setting  
-    1. `mkdir .ssh && cd .ssh`
-    2. `ssh-keygen -t ed25519 -C "keep.forward1001@gmail.com"`
-    3. ~/.sshに以下の内容を記載  
+## Installation
 
-        ```config
-        Host github github.com
-        HostName github.com
-        User git
-        IdentityFile ~/.ssh/id_git_ed25519
-        ```
+### Clone the repo
 
-    4. `ssh -T github`
+`git clone https://github.com/hayapo/dotfiles.git`
 
-## Clone this repo
-
-`git clone git@github.com:hayapo/dotfiles_kali.git`
-
-## After clone this repo
+### Setting up
 
 ```bash
-sudo chmod +x dotfiles
+# help: ./dotfiles.sh -h
+
+cd dotfiles
+sudo chmod +x $HOME/dotfiles
+
+# 上から順に実行していく
 ./dotfiles.sh install
-./dotfiles.sh symblink
-./dotfiles.sh fish
- 
+./dotfiles.sh link
+./dotfiles.sh node
 ```

@@ -10,6 +10,7 @@ export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 export PATH=$HOME/.rye/env:$PATH
 export PATH="$HOME/.rye/shims:$PATH"
+export NVM_DIR="$HOME/.nvm"
 
 # bind keys
 bindkey "^[[H" beginning-of-line
@@ -82,3 +83,7 @@ fi
 eval "$($(brew --prefix)/bin/brew shellenv)"
 eval "$(starship init zsh)"
 eval "$(sheldon source)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

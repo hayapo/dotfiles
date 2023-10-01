@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 tput setaf 2; echo "Select Linux Distro"; tput sgr0
 select VAR in "Ubuntu" "Kali-Linux"; do
     case $VAR in 
@@ -28,18 +28,10 @@ tput setaf 2; echo "Install Linuxbrew"; tput sgr0
 test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# install brew bundle
-# TODO:UbuntuのときはStarshipをインストールするようにする
-tput setaf 2; echo "Do you want to install Starship ?"; tput sgr0
-select VAR in "Yes" "No"; do
-    case $VAR in 
-        "Yes" )
-            brew bundle --file '~/dotfiles/Brewfile'
-            brew install starship
-            break;;
+# install nvm
+tput setaf 2; echo "Install nvm(node version manager)"; tput sgr0
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
-        "NO" )
-            brew bundle --file '~/dotfiles/Brewfile'
-            break;;
-    esac
-done
+# install brew bundle
+tput setaf 2; echo "Install brew bundle"; tput sgr0
+brew bundle --file '~/dotfiles/Brewfile'

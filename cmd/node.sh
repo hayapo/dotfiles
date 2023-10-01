@@ -1,2 +1,3 @@
 # node install 
-nvm install 16
+nvm install --lts
+nvm use --lts

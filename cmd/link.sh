@@ -1,8 +1,15 @@
-# ./bin.sh
-ln -sf ~/dotfiles/configs/fish ~/.config/
-ln -sf ~/dotfiles/configs/starship.toml ~/.config/starship.toml
-ln -sf ~/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/dotfiles/.hushlogin ~/.hushlogin
-ln -sf ~/dotfiles/.profile ~/.profile
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/configs/neovim/ ~/.config/nvim
+#!/bin/bash
+dotfiles_dir="$HOME/dotfiles"
+
+# ln -sf ${dotfiles_dir}/.bashrc $HOME/.bashrc
+# ln -sf ${dotfiles_dir}/.profile $HOME/.profile
+ln -sf ${dotfiles_dir}/.hushlogin $HOME/.hushlogin
+ln -sf ${dotfiles_dir}/.gitconfig $HOME/.gitconfig
+ln -sf ${dotfiles_dir}/.zshrc $HOME/.zshrc
+
+
+
+ln -sf ${dotfiles_dir}/.config/starship.toml $HOME/.config/starship.toml
+ln -sf ${dotfiles_dir}/.config/neovim/ $HOME/.config/
+ln -sf ${dotfiles_dir}/.config/fish $HOME/.config/
+ln -sf ${dotfiles_dir}/.config/sheldon $HOME/.config/
