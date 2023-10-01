@@ -19,12 +19,19 @@
 
 ```bash
 # help: ./dotfiles.sh -h
-
 cd dotfiles
 sudo chmod +x $HOME/dotfiles
 
 # 上から順に実行していく
 ./dotfiles.sh install
 ./dotfiles.sh link
-./dotfiles.sh node
+
+# ログインシェルの変更
+echo "/home/linuxbrew/.linuxbrew/bin/zsh" | sudo tee /etc/shells
+sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh hayapo
+
+# node install (after brew bundle)
+nvm install --lts
+nvm use --lts
+
 ```
