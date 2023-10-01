@@ -34,4 +34,9 @@ sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh hayapo
 nvm install --lts
 nvm use --lts
 
+# copy wezterm config to windows
+cp $HOME/dotfiles/.config/wezterm/.wezterm.lua /mnt/c/Users/hayat/.wezterm.lua
+
+# copy imgs
+cp -r ~/dotfiles/wallpaper /mnt/c/Users/hayat/Pictures
 ```

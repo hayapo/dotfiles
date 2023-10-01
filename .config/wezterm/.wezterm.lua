@@ -29,6 +29,25 @@ config.adjust_window_size_when_changing_font_size = false
 config.hyperlink_rules = {}
 config.audible_bell = "Disabled"
 
+-- Setting the window background image
+local SAC_1 = "C:\\Users\\hayat\\Pictures\\wallpaper\\SAC_1.jpg"
+local SAC_2 = "C:\\Users\\hayat\\Pictures\\wallpaper\\SAC_2.jpg"
+local Laughingman = "C:\\Users\\hayat\\Pictures\\wallpaper\\Laughingman.jpg"
+
+config.window_background_image = SAC_2
+config.window_background_opacity = 1.0
+config.window_background_image_hsb = {
+  -- Darken the background image by reducing it to 1/3rd
+  brightness = 0.2,
+
+  -- You can adjust the hue by scaling its value.
+  -- a multiplier of 1.0 leaves the value unchanged.
+  hue = 1.0,
+
+  -- You can adjust the saturation also.
+  saturation = 1.0,
+}
+
 local act = wezterm.action
 config.keys = {
   {
