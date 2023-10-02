@@ -48,7 +48,7 @@ bindkey -s '^p' 'fp\n'
 
 ## ghq配下のディレクトリを一覧表示
 function _ghq_fzf_repo() {
-  local repo="$(ghq list | fzf --height=100% --border --preview="ls -AF --color=always ${root}/{1}")"
+  local repo="$(ghq list | fzf --height=100% --border --preview="ls -AF --color=always ${$(ghq root)}/{1}")"
   if [ -n "$repo" ]; then
     BUFFER="cd $(ghq root)/$repo"
   fi
