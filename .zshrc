@@ -27,9 +27,10 @@ alias lsa="ls -la"
 
 ## Git
 ### git 
+alias gc="git checkout"
 alias gc-b="git checkout -b"
-alias gp="git push"
-alias gpl="git pull"
+alias gpush="git push"
+alias gpull="git pull"
 alias ga="git add"
 alias gs="git status"
 alias gc-m="git commit -m"

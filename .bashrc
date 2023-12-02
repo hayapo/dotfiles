@@ -119,7 +119,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export DISPLAY=:0
 export PATH=$PATH:'/mnt/c/Users/hayat/AppData/Local/Programs/Microsoft VS Code/bin'
 
 export PYENV_ROOT="${HOME}/.pyenv"
@@ -140,3 +139,4 @@ export FZF_DEFAULT_OPTS="--height 80% --layout=reverse"
 #   --preview 'bat --color=always --style=header,grid {}'
 #   --preview-window=right:60%
 # "
+export DISPLAY=:0.0

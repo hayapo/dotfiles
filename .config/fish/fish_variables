@@ -24,10 +24,14 @@ SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:\x1d
 SETUVAR _tide_prompt_10333:\x1d
 SETUVAR _tide_prompt_1034:\x1d
+SETUVAR _tide_prompt_11723:\x1d
 SETUVAR _tide_prompt_14485:\x1b\x28B\x1b\x5bm\x1b\x28B\x1b\x5bm\x1e\x1b\x28B\x1b\x5bm\x1b\x28B\x1b\x5bm
 SETUVAR _tide_prompt_14789:\x1b\x28B\x1b\x5bm\x1b\x28B\x1b\x5bm\x1e\x1b\x28B\x1b\x5bm\x1b\x28B\x1b\x5bm
 SETUVAR _tide_prompt_14969:\x1b\x28B\x1b\x5bm\x1b\x28B\x1b\x5bm\x1e\x1b\x28B\x1b\x5bm\x1b\x28B\x1b\x5bm
 SETUVAR _tide_prompt_156697:\x1d
+SETUVAR _tide_prompt_4362:\x1d
+SETUVAR _tide_prompt_4482:\x1d
+SETUVAR _tide_prompt_7930:\x1d
 SETUVAR _tide_right_items:\x1d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
